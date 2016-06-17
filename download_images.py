@@ -13,8 +13,8 @@ def read_file():
     return contant
 
 '''拼接url'''
-def get_url(info_id):
-    return "/info/id-" + info_id +"?api_id=20&api_type=data"
+def get_url(data_id):
+    return "/data/" + info_id +"?data_id=20&data_type=d"
 
 '''获取response内容'''
 def get_http(url):
@@ -51,7 +51,7 @@ def get_image(data):
 '''保存图片文件到本地'''
 def save_image(image_name):
     file_name = image_name[8:]
-    url = "http://pic6.58cdn.com.cn" + image_name
+    url = "http://image.xxx.com" + image_name
     data = urllib.urlopen(url).read()
     path = IMAGE_FILE_PATH + file_name
     f = file(path, "wb")
